@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'profissional',
     'cliente',
     'agenda',
+    'administracao',
 ]
 
 MIDDLEWARE = [
