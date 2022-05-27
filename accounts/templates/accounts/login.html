@@ -33,7 +33,7 @@
 <div class="container">
     <form class="form-signin" method="post">
         {% csrf_token %}
-        <h2 class="form-signin-heading">Por favor, faça login</h2>
+        <h2 class="form-signin-heading text-center">Entrar</h2>
 
         {% if messages %}
         {% for msg in messages %}
@@ -48,7 +48,7 @@
         <label for="password" class="sr-only">Senha</label>
         <input type="password" id="password" name="password" class="form-control" placeholder="senha" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-        <a href="{% url 'add_user' %}" class="btn btn-lg btn-info btn-block">não tem cadastro ?</button></a>
+        <a href="{% url 'add_user' %}" class="btn btn-lg btn-info btn-block">Criar conta</a>
 
     </form>
 

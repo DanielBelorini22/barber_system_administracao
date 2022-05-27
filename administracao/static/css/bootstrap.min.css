@@ -1353,13 +1353,14 @@ button, input, select, textarea {
 }
 
 a {
-    color: #337ab7;
+    color: #339fb7;
     text-decoration: none
 }
 
 a:focus, a:hover {
-    color: #23527c;
-    text-decoration: underline
+    color: black;
+    text-decoration: underline;
+    background-color: #1ab7ea;
 }
 
 a:focus {
@@ -4724,8 +4725,8 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 }
 
 .navbar-default {
-    background-color: #f8f8f8;
-    border-color: #e7e7e7
+    background-color: inherit;
+    border-color: inherit;
 }
 
 .navbar-default .navbar-brand {
@@ -5697,10 +5698,10 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus, a.list-g
 .panel {
     margin-bottom: 20px;
     background-color: #fff;
-    border: 1px solid transparent;
+    border: none;
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05)
+    box-shadow: 0 4px 15px rgb(0 0 0 / 33%)
 }
 
 .panel-body {
@@ -5708,7 +5709,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus, a.list-g
 }
 
 .panel-heading {
-    padding: 10px 15px;
+    padding: 20px 15px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px

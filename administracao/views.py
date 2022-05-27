@@ -29,7 +29,7 @@ def cliente(request):
             return redirect('home')
     else:
         form = ClienteForm()
-    return render(request, 'core/clienteform.html', {'form': form})
+    return render(request, 'administracao/clienteform.html', {'form': form})
 
 
 @login_required
@@ -41,7 +41,7 @@ def prof(request):
             return redirect('home')
     else:
         form = ProfForm()
-    return render(request, 'core/profform.html', {'form': form})
+    return render(request, 'administracao/profform.html', {'form': form})
 
 
 @login_required
@@ -53,7 +53,7 @@ def service(request):
             return redirect('home')
     else:
         form = ServiceForm()
-    return render(request, 'core/serviceform.html', {'form': form})
+    return render(request, 'administracao/serviceform.html', {'form': form})
 
 
 @login_required
@@ -65,7 +65,7 @@ def agenda(request):
             return redirect('lista')
     else:
         form = AgendaForm()
-    return render(request, 'core/agendaform.html', {'form': form})
+    return render(request, 'administracao/agendaform.html', {'form': form})
 
 
 @login_required
@@ -74,7 +74,7 @@ def lista(request):
     paginator = Paginator(relation, 3)
     page = request.GET.get('page')
     relation = paginator.get_page(page)
-    return render(request, 'core/lista.html', {'relation': relation})
+    return render(request, 'administracao/lista.html', {'relation': relation})
 
 
 @login_required
@@ -87,7 +87,7 @@ def editar(request, id_agenda):
             return redirect('lista')
     else:
         form = AgendaForm(instance=edite)
-    return render(request, 'core/agendaform.html', {'form': form})
+    return render(request, 'administracao/agendaform.html', {'form': form})
 
 
 @login_required
@@ -106,7 +106,7 @@ def edita_cliente(request, id_cliente):
             return redirect('home')
     else:
         form = ClienteForm(instance=ed)
-    return render(request, 'core/clienteform.html', {'form': form})
+    return render(request, 'administracao/clienteform.html', {'form': form})
 
 
 @login_required
