@@ -1,5 +1,4 @@
 {% load static %}
-{% load widget_tweaks %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -47,7 +46,7 @@
 
                 <div class="form-group" required>
                     <label for="{{ form.first_name.id_for_label }}">Nome:</label>
-                    {{ form.first_name|add_class:"form-control"|attr:'autofocus' }}
+                    {{ form.first_name|add_class:"form-control" }}
                 </div>
                 <div class="form-group" required>
                     <label for="{{ form.last_name.id_for_label }}">Sobrenome:</label>
