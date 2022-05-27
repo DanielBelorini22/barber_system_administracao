@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Apps
     'accounts',
     'profissional',
+    'cliente',
 ]
 
 MIDDLEWARE = [
