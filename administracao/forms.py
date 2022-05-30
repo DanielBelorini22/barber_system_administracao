@@ -12,7 +12,7 @@ class ClienteForm(ModelForm):
 
 class ProfForm(ModelForm):
     class Meta:
-        model = Service
+        model = Prof
         fields = '__all__'
 
 
