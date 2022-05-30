@@ -1,45 +1,56 @@
 {% extends "base.html" %}
 
 {% block body %}
-<br>
-<h2>Cadastrar Serviços</h2>
-<br>
-<form method="post">
-    {% csrf_token %}
+    <br>
+    <h2>Cadastrar serviços</h2>
+    <br>
+
     <div class="row">
-        <div class="col-md-8">
-            <div class="form-group ">
-                <label for="{{ form.nome.id_for_label }}">Ativo :</label>
-                {{ form.ativo }}
-            </div>
-        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Cadastro de serviços</strong>
+                </div>
 
-        <div class="col-md-8">
-            <div class="form-group ">
-                <label for="{{ form.nome.id_for_label }}">Nome :</label>
-                {{ form.nome }}
-            </div>
-        </div>
-
-         <div class="col-md-8">
-            <div class="form-group ">
-                <label for="{{ form.nome.id_for_label }}">Duração :</label>
-                {{ form.duracao }}
-            </div>
-        </div>
-
-        <div class="col-md-8">
-            <div class="form-group ">
-                <label for="{{ form.nome.id_for_label }}">Preço :</label>
-                {{ form.preco }}
+                <div class="panel-body">
+                    <div class="">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="col-md-8">
+                                    <div class="form-group ">
+                                        <label for="{{ form.ativo.id_for_label }}">Ativo :</label>
+                                        {{ form.ativo }}
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group col-md-6">
+                                        <label for="{{ form.nome.id_for_label }}">Nome: </label>
+                                        {{ form.nome }}
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group col-md-6">
+                                        <label for="{{ form.duracao.id_for_label }}">Duração: </label>
+                                        {{ form.duracao }}
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group col-md-6">
+                                        <label for="{{ form.preco.id_for_label }}">Preço: </label>
+                                        {{ form.preco }}
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-6">
+                                <button class="btn btn-success" type="submit">cadastrar cliente</button>
+                                <a href="{% url 'home' %}" class="btn btn-danger" type="submit">cancelar cadastro</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="col-md-4">
-        <button class="btn btn-success" type="submit">cadastrar serviço</button>
-        <a href="{% url 'home' %}" class="btn btn-danger" type="submit">cancelar cadastro</a>
-    </div>
-
-</form>
 {% endblock body %}

@@ -13,9 +13,9 @@ class Agenda(models.Model):
     hora = models.TimeField(auto_now_add=False, null=True)
 
     STATUS_CHOICES = (
-        ('A', 'Aberto'),
-        ('T', 'Andamento'),
-        ('F', 'Fechado')
+        ('A', 'Agendado'),
+        ('F', 'Finalizado'),
+        ('C', 'Cancelado')
     )
 
     status = models.CharField('Status', max_length=1, choices=STATUS_CHOICES, null=True, blank=True)
