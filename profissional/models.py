@@ -42,7 +42,7 @@ class Service(models.Model):
         ('duas_horas', '02:00')
     )
     duracao = models.CharField('Duração', max_length=50, choices=DURACAO_CHOICES)
-    preco = models.FloatField('Preço', null=False, blank=False, validators=[MinValueValidator(0.0)])
+    preco = models.FloatField('Preço R$', null=False, blank=False)
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)
     ativo = models.BooleanField('Ativo', default=True)

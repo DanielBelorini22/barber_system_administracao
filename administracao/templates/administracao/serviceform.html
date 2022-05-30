@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block body %}
     <br>
-    <h2>Cadastrar serviços</h2>
+    <h2 style="color: #000000">Cadastrar serviços</h2>
     <br>
 
     <div class="row">
@@ -17,34 +18,30 @@
                         <form method="post">
                             {% csrf_token %}
                             <div class="form-row">
-                                <div class="col-md-8">
+                                <div class="col-md-12">
                                     <div class="form-group ">
-                                        <label for="{{ form.ativo.id_for_label }}">Ativo :</label>
-                                        {{ form.ativo }}
+                                        {{ form.ativo|as_crispy_field }}
                                     </div>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="form-group col-md-6">
-                                        <label for="{{ form.nome.id_for_label }}">Nome: </label>
-                                        {{ form.nome }}
+                                <div class="col-md-12">
+                                    <div class="form-group col-md-12">
+                                        {{ form.nome|as_crispy_field }}
                                     </div>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="form-group col-md-6">
-                                        <label for="{{ form.duracao.id_for_label }}">Duração: </label>
-                                        {{ form.duracao }}
+                                <div class="col-md-12">
+                                    <div class="form-group col-md-12">
+                                        {{ form.duracao|as_crispy_field }}
                                     </div>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="form-group col-md-6">
-                                        <label for="{{ form.preco.id_for_label }}">Preço: </label>
-                                        {{ form.preco }}
+                                <div class="col-md-12">
+                                    <div class="form-group col-md-12">
+                                        {{ form.preco|as_crispy_field }}
                                     </div>
                                 </div>
                             </div>
                             <br>
-                            <div class="col-md-6">
-                                <button class="btn btn-success" type="submit">cadastrar cliente</button>
+                            <div class="col-md-12">
+                                <button class="btn btn-success" type="submit">cadastrar serviço</button>
                                 <a href="{% url 'home' %}" class="btn btn-danger" type="submit">cancelar cadastro</a>
                             </div>
                         </form>

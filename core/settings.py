@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'cliente',
     'agenda',
     'administracao',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/accounts/login-usuario/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

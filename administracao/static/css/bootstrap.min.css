@@ -3454,7 +3454,9 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 .btn-success {
     color: #fff;
     background-color: #5cb85c;
-    border-color: #4cae4c
+    border-color: #4cae4c;
+    font-size: 16px;
+    text-transform: capitalize;
 }
 
 .btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open > .dropdown-toggle.btn-success {
@@ -3532,7 +3534,9 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 .btn-danger {
     color: #fff;
     background-color: #d9534f;
-    border-color: #d43f3a
+    border-color: #d43f3a;
+    font-size: 16px;
+    text-transform: capitalize;
 }
 
 .btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open > .dropdown-toggle.btn-danger {
@@ -5880,8 +5884,9 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus, a.list-g
 
 .panel-default > .panel-heading {
     color: #ffffff;
-    background-color: #339fb7;
-    border-color: #ddd
+    background-color: #01544d;
+    border-color: #ddd;
+    font-size: 18px;
 }
 
 .panel-default > .panel-heading + .panel-collapse > .panel-body {

@@ -6,7 +6,7 @@
             padding: 0 15px;
             margin-bottom: 1rem;
             border: 1px solid transparent;
-            border-radius: .25 rempx
+            border-radius: .25rem
         }
 
         .alert p {
@@ -79,7 +79,7 @@
                     <a href="?page=1"></a>
                     <a class="text-danger" href="?page={{ relation.previous_page_number }}">anterior</a>
                 {% endif %}
-            <span class="current">
+                <span class="current">
             Paginas {{ relation.number }} de {{ relation.paginator.num_pages }}
             </span>
                 {% if relation.has_next %}
