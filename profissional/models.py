@@ -45,6 +45,7 @@ class Service(models.Model):
     preco = models.FloatField('Preço', null=False, blank=False, validators=[MinValueValidator(0.0)])
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)
+    ativo = models.BooleanField('Ativo', default=True)
 
     class Meta:
         verbose_name = 'Serviço'
