@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator
 from django.db import models
 
 
@@ -17,13 +18,33 @@ class Prof(models.Model):
 
 
 class Service(models.Model):
-    nome = models.CharField('Serviço', max_length=100)
+    NOME_CHOICES = (
+        ('corte', 'Corte de cabelo'),
+        ('barba', 'Barba'),
+        ('sobrancelha', 'Sobrancelha'),
+        ('corte_sobrancelha', 'Corte de cabelo e sobrancelha'),
+        ('corte_barba', 'Corte de cabelo e barba'),
+        ('barba_sobrancelha', 'Barba e sobrancelha'),
+        ('corte_barba_sobrancelha', 'Corte de cabelo, barba e sobrancelha'),
+    )
+
+    nome = models.CharField('Serviço', max_length=100, choices=NOME_CHOICES)
     pag = (
         ('D', 'Dinheiro'),
         ('CD', 'Cartão Débito'),
         ('CC', 'Cartão Crédito')
     )
     pagamento = models.CharField('Pagamento', max_length=2, choices=pag, blank=True)
+    DURACAO_CHOICES = (
+        ('meia_hora', '00:30'),
+        ('uma_hora', '01:00'),
+        ('uma_hora_e_meia', '01:30'),
+        ('duas_horas', '02:00')
+    )
+    duracao = models.CharField('Duração', max_length=50, choices=DURACAO_CHOICES)
+    preco = models.FloatField('Preço', null=False, blank=False, validators=[MinValueValidator(0.0)])
+    criado_em = models.DateTimeField(auto_now_add=True)
+    atualizado_em = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Serviço'
