@@ -58,7 +58,7 @@ Obs - (No Visual Studio Code selecione o interpretador venv criado prescionando 
 
 02 - O mesmo após criado deverá ser configurado ficar semelhante a este:
 
-    SECRET_KEY=informe_aqui_a_secrete_do_projeto
+    SECRET_KEY=informe_aqui_a_secret_key
     DEBUG=True
     DATABASE_NAME=barber_system_administracao
     DATABASE_USERNAME=root
