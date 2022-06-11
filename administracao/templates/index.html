@@ -145,19 +145,21 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-users fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
+                        <div class="panel-heading" style="background-color:rgb(76, 95, 154)">
+                            <a href="{% url 'cliente' %}">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-users fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
 
-                                    <div class="huge">+50</div>
-                                    <div>Clientes</div>
+                                        <div class="huge">+50</div>
+                                        <div>Clientes</div>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <a href="#">
+                        <a href="{% url 'cliente' %}">
                             <div class="panel-footer">
                                 <span class="pull-left">Detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -169,18 +171,20 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa-solid fa-scissors fa-5x"></i>
+                        <div class="panel-heading" style="background-color:rgb(101, 241, 115)">
+                            <a href="{% url 'service' %}"  >
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa-solid fa-scissors fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">+12</div>
+                                        <div>Serviços</div>
+                                    </div>
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">+12</div>
-                                    <div>Serviços</div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-                        <a href="#">
+                        <a href="{% url 'service' %}">
                             <div class="panel-footer">
                                 <span class="pull-left">Detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -192,18 +196,20 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-calendar fa-5x"></i>
+                        <div class="panel-heading"  style="background-color:rgb(239, 201, 154)">
+                            <a href="{% url 'agenda' %}">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-calendar fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">+124</div>
+                                        <div>Agendamentos</div>
+                                    </div>
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">+124</div>
-                                    <div>Agendamentos</div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-                        <a href="#">
+                        <a href="{% url 'agenda' %}">
                             <div class="panel-footer">
                                 <span class="pull-left">Detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -215,18 +221,20 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-user fa-5x"></i>
+                        <div class="panel-heading" style="background-color:rgb(243, 158, 132)">
+                            <a href="{% url 'prof' %}">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-user fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">+13</div>
+                                        <div>Profissionais</div>
+                                    </div>
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">+13</div>
-                                    <div>Profissionais</div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-                        <a href="#">
+                        <a href="{% url 'prof' %}">
                             <div class="panel-footer">
                                 <span class="pull-left">Detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
