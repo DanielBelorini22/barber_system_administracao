@@ -56,3 +56,31 @@
 .active > a > .fa.plus-minus:before {
     content: "\f068"
 }
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+}
+
+li ul {
+    position: absolute;
+    left: 1px;
+    top: 10;
+    display: none;
+    width: 100%;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none!important;
+    padding: 5px;
+}
+
+ul li a:focus {
+    background-color: #eeeeee;
+}
+
+li:hover ul { display: block; }

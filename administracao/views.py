@@ -33,6 +33,17 @@ def cliente(request):
 
 
 @login_required
+def relatorio_cliente(request):
+    cliente = Person.objects.all()
+
+    context = {
+        'clientes': cliente,
+    }
+
+    return render(request, 'relatorios/relatorio_clientes.html', context=context)
+
+
+@login_required
 def prof(request):
     if request.method == 'POST':
         form = ProfForm(request.POST)
