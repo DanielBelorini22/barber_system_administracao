@@ -1343,13 +1343,15 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #fff
+    background-image: url("https://uploaddeimagens.com.br/images/003/911/115/original/fundo_cadastro.png?1655850780");
 }
 
 button, input, select, textarea {
     font-family: inherit;
     font-size: inherit;
-    line-height: inherit
+    line-height: inherit;
+    border-radius: 4px;
+
 }
 
 a {
@@ -2919,12 +2921,12 @@ output {
     width: 100%;
     height: 34px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.42857143;
     color: #555;
-    background-color: #fff;
+    background-color: #fff0;
     background-image: none;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -3354,7 +3356,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;

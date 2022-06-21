@@ -44,6 +44,28 @@ def relatorio_cliente(request):
 
 
 @login_required
+def relatorio_profissional(request):
+    profissional = Prof.objects.all()
+
+    context = {
+        'profissionais': profissional,
+    }
+
+    return render(request, 'relatorios/relatorio_profissionais.html', context=context)
+
+
+@login_required
+def relatorio_servico(request):
+    servico = Prof.objects.all()
+
+    context = {
+        'servico': servico,
+    }
+
+    return render(request, 'relatorios/relatorio_servicos.html', context=context)
+
+
+@login_required
 def prof(request):
     if request.method == 'POST':
         form = ProfForm(request.POST)
