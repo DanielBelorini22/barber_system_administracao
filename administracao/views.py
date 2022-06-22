@@ -56,10 +56,10 @@ def relatorio_profissional(request):
 
 @login_required
 def relatorio_servico(request):
-    servico = Prof.objects.all()
+    servico = Service.objects.all()
 
     context = {
-        'servico': servico,
+        'servicos': servico,
     }
 
     return render(request, 'relatorios/relatorio_servicos.html', context=context)

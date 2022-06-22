@@ -34,14 +34,14 @@
                             <thead>
                                 <tr>
                                     <th>Nome</th>
-                                    <th>Pagamento</th>
-                                    <th>Preco</th>
+                                    <th>Duração</th>
                                     <th>Criado</th>
                                     <th>Atualizado</th>
+                                    <th>Ativo</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            {% for servico in Servicos %}
+                            {% for servico in servicos %}
                                 <tr>
                                     <td>{{ servico.nome }}</td>
                                     <td>{{ servico.duracao }}</td>
