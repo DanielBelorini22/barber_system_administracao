@@ -57,7 +57,7 @@
         </button>
 
         <ul class="nav navbar-nav navbar-left navbar-top-links">
-            <li><a href="/"><i class="fa fa-home fa-fw"></i> Barber System - {{ data }}</a></li>
+            <li><a href="/"><i class="fa fa-home fa-fw"></i> Barber System - {{ data|date:"D d M Y" }} {{ data|time:"H:i" }}</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right navbar-top-links">
             <li class="dropdown">

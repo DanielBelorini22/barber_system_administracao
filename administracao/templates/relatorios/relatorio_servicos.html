@@ -32,13 +32,13 @@
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover">
                             <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Duração</th>
-                                    <th>Criado</th>
-                                    <th>Atualizado</th>
-                                    <th>Ativo</th>
-                                </tr>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Duração</th>
+                                <th>Criado</th>
+                                <th>Atualizado</th>
+                                <th>Ativo</th>
+                            </tr>
                             </thead>
                             <tbody>
                             {% for servico in servicos %}
@@ -47,7 +47,11 @@
                                     <td>{{ servico.duracao }}</td>
                                     <td>{{ servico.criado_em }}</td>
                                     <td>{{ servico.atualizado_em }}</td>
-                                    <td>{{ servico.ativo }}</td>
+                                    {% if servico.ativo %}
+                                        <td>Sim</td>
+                                    {% else %}
+                                        <td>Não</td>
+                                    {% endif %}
                                 </tr>
                             {% empty %}
                                 <div class="alert success">
