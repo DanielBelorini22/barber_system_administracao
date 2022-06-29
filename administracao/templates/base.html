@@ -65,10 +65,9 @@
                         class="caret"></b>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-
-                    </li>
                     <li class="divider"></li>
-                    <li><a href="{% url 'logout_user' %}"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
+                    <li>
+                        <a href="{% url 'logout_user' %}"><i class="fa fa-sign-out fa-fw"></i>Sair</a>
                     </li>
                 </ul>
             </li>
@@ -101,14 +100,15 @@
 
 
                     <li>
-                        <a href="{% url 'service' %}"><i class="fa-solid fa-scissors fa-fw"></i> Cadastro Serviços
-                        </a>
+                        <a href="{% url 'service' %}"><i class="fa-solid fa-scissors fa-fw"></i> Cadastro Serviços</a>
+                    </li>
                     <li>
                         <a href="{% url 'agenda' %}"><i class="fa-solid fa-calendar fa-fw"></i> Agendamento</a>
                     </li>
                     <li>
                         <a href="{% url 'lista' %}"><i class="fa fa-table fa-fw"></i> Lista de Agendamento</a>
                     </li>
+                </ul>
             </div>
         </div>
     </nav>
