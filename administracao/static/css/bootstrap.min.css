@@ -1443,6 +1443,10 @@ hr {
     color: #fff;
 }
 
+#titulo_header {
+    color: #000!important;
+}
+
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
     font-weight: 400;
     line-height: 1;
@@ -1637,7 +1641,7 @@ a.bg-danger:hover {
 .page-header {
     padding-bottom: 9px;
     margin: 40px 0 20px;
-    border-bottom: 1px solid #eee
+    border-bottom: 1px solid #eee;
 }
 
 ol, ul {
