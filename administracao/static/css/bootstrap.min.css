@@ -3437,7 +3437,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
     color: #fff;
     background-color: #007eff;
     border-color: #007eff;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
