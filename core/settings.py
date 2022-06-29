@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'agenda',
     'administracao',
     'crispy_forms',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [

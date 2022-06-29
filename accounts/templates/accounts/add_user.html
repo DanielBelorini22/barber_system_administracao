@@ -1,4 +1,5 @@
 {% load static %}
+{% load bootstrap %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,7 +15,7 @@
     <title>Novo Usuário ? Cadastre-se!</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -39,29 +40,16 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <center><h2>Por favor, cadastre-se</h2></center>
-            <form method="post">
-                {% csrf_token %}
-
-                <div class="form-group form-control" required>
-                    <label for="{{ form.first_name.id_for_label }}">Nome:</label>
-                    {{ form.first_name }}
-                </div>
-                <div class="form-group form-control" required>
-                    <label for="{{ form.last_name.id_for_label }}">Sobrenome:</label>
-                    {{ form.last_name }}
-                </div>
-                <div class="form-group form-control" required>
-                    <label for="{{ form.username.id_for_label }}">Usuário:</label>
-                    {{ form.username }}
-                </div>
-                <div class="form-group form-control">
-                    <label for="{{ form.password.id_for_label }}">Senha:</label>
-                    {{ form.password }}
-                </div>
-                <button type="submit" class="btn btn-info">Cadastrar Usuário</button>
-            </form>
+        <div class="col-md-12" style="margin-top: 50px">
+            <h1 class="text-center" style="font-weight: bold">Criar conta</h1>
+            <div style="height: 100%; width:950px; margin-left: auto; margin-right: auto; position: relative">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|bootstrap }}
+                    <br>
+                    <button type="submit" class="btn btn-primary">Cadastrar Usuário</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
