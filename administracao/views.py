@@ -22,6 +22,7 @@ def home(request):
 
 @login_required
 def cliente(request):
+    data = datetime.now()
     if request.method == 'POST':
         form = ClienteForm(request.POST)
         if form.is_valid():
@@ -29,11 +30,12 @@ def cliente(request):
             return redirect('home')
     else:
         form = ClienteForm()
-    return render(request, 'administracao/clienteform.html', {'form': form})
+    return render(request, 'administracao/clienteform.html', {'form': form, 'data': data})
 
 
 @login_required
 def prof(request):
+    data = datetime.now()
     if request.method == 'POST':
         form = ProfForm(request.POST)
         if form.is_valid():
@@ -41,11 +43,12 @@ def prof(request):
             return redirect('home')
     else:
         form = ProfForm()
-    return render(request, 'administracao/profform.html', {'form': form})
+    return render(request, 'administracao/profform.html', {'form': form, 'data': data})
 
 
 @login_required
 def service(request):
+    data = datetime.now()
     if request.method == 'POST':
         form = ServiceForm(request.POST)
         if form.is_valid():
@@ -53,11 +56,12 @@ def service(request):
             return redirect('home')
     else:
         form = ServiceForm()
-    return render(request, 'administracao/serviceform.html', {'form': form})
+    return render(request, 'administracao/serviceform.html', {'form': form, 'data': data})
 
 
 @login_required
 def agenda(request):
+    data = datetime.now()
     if request.method == 'POST':
         form = AgendaForm(request.POST)
         if form.is_valid():
@@ -65,7 +69,7 @@ def agenda(request):
             return redirect('lista')
     else:
         form = AgendaForm()
-    return render(request, 'administracao/agendaform.html', {'form': form})
+    return render(request, 'administracao/agendaform.html', {'form': form, 'data': data})
 
 
 @login_required
