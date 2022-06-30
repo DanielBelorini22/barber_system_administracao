@@ -36,10 +36,12 @@
 
 <div class="container">
     <div class="row">
-        <a href="{% url 'user_login' %}" style="margin-left: 10px; color: orange"><i class="fa fa-arrow-left fa-fw fa-2x" aria-hidden="true"></i></a>
+        <a href="{% url 'user_login' %}" style="margin-left: 10px; color: orange;">
+            <i class="fa fa-arrow-left fa-fw fa-2x"></i>
+        </a>
         <div class="col-md-12" style="margin-top: 50px">
             <h1 class="text-center" style="font-weight: bold; margin-bottom: 50px">Criar conta</h1>
-            <div style="height: 100%; width:100%; margin-left: auto; margin-right: auto; position: relative">
+            <div style="height: 100%; width:50%; margin-left: auto; margin-right: auto; position: relative">
                 <form method="post">
                     {% csrf_token %}
                     {{ form|bootstrap }}
