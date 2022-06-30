@@ -117,3 +117,36 @@ def edita_cliente(request, id_cliente):
 def deleta_cliente(request, id_cliente):
     exclui_cliente = Person.objects.get(id=id_cliente).delete()
     return redirect('home')
+
+
+@login_required
+def relatorio_cliente(request):
+    cliente = Person.objects.all()
+
+    context = {
+        'clientes': cliente,
+    }
+
+    return render(request, 'relatorios/relatorio_clientes.html', context=context)
+
+
+@login_required
+def relatorio_profissional(request):
+    profissional = Prof.objects.all()
+
+    context = {
+        'profissionais': profissional,
+    }
+
+    return render(request, 'relatorios/relatorio_profissionais.html', context=context)
+
+
+@login_required
+def relatorio_servico(request):
+    servico = Service.objects.all()
+
+    context = {
+        'servicos': servico,
+    }
+
+    return render(request, 'relatorios/relatorio_servicos.html', context=context)
