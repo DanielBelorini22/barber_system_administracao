@@ -47,10 +47,17 @@ def prof(request):
         form = ProfForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('profissionais')
     else:
         form = ProfForm()
     return render(request, 'administracao/profform.html', {'form': form, 'data': data})
+
+
+@login_required
+def profissionais(request):
+    data = datetime.now()
+    profissionais = Prof.objects.all()
+    return render(request, 'administracao/profissionais.html', {'profissionais': profissionais, 'data': data})
 
 
 @login_required
@@ -64,6 +71,13 @@ def service(request):
     else:
         form = ServiceForm()
     return render(request, 'administracao/serviceform.html', {'form': form, 'data': data})
+
+
+@login_required
+def services(request):
+    data = datetime.now()
+    servicos = Service.objects.all()
+    return render(request, 'administracao/servicos.html', {'servicos': servicos, 'data': data})
 
 
 @login_required
