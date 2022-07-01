@@ -35,6 +35,7 @@
                             <tr>
                                 <th>Nome</th>
                                 <th>Duração</th>
+                                <th>Preco</th>
                                 <th>Criado</th>
                                 <th>Atualizado</th>
                                 <th>Ativo</th>
@@ -45,6 +46,7 @@
                                 <tr>
                                     <td>{{ servico.nome }}</td>
                                     <td>{{ servico.duracao }}</td>
+                                    <td>R$ {{ servico.preco|floatformat:2 }}</td>
                                     <td>{{ servico.criado_em }}</td>
                                     <td>{{ servico.atualizado_em }}</td>
                                     {% if servico.ativo %}
