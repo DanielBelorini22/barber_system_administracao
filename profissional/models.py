@@ -8,6 +8,7 @@ from django.db import models
 class Prof(models.Model):
     nome = models.CharField('Profissional', max_length=100, blank=True)
     telefone = models.CharField('Telefone', max_length=14, blank=True)
+    ativo = models.BooleanField('Ativo', default=True)
 
     class Meta:
         verbose_name = 'Profissional'
