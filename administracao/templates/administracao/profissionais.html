@@ -11,7 +11,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <strong>Cadastro de barbeiro</strong>
-                    <a class="btn btn-primary" href="{% url 'cliente' %}" style="float: right; font-weight: bold; font-size: 15px">+ Profissional</a>
+                    <a class="btn btn-primary" href="{% url 'prof' %}" style="float: right; font-weight: bold; font-size: 15px">+ Profissional</a>
                 </div>
 
                 <div class="panel-body">
@@ -31,7 +31,11 @@
                                 <tr>
                                     <td>{{ profissional.nome }}</td>
                                     <td>{{ profissional.telefone }}</td>
-                                    <td>{{ profissional.ativo }}</td>
+                                    {% if profissional.ativo %}
+                                        <td>Sim</td>
+                                    {% else %}
+                                        <td>Não</td>
+                                    {% endif %}
                                     <td>
                                         <a href="">
                                             <i class="fa-solid fa-pencil" style="color: orange"></i>
