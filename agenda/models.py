@@ -9,8 +9,8 @@ class Agenda(models.Model):
     cliente = models.ForeignKey(Person, on_delete=models.CASCADE, null=True, blank=True)
     profissional = models.ForeignKey(Prof, on_delete=models.CASCADE, null=True, blank=True)
     servico = models.ForeignKey(Service, on_delete=models.CASCADE, null=True, blank=True)
-    data = models.DateField(auto_now_add=False, null=True)
-    hora = models.TimeField(auto_now_add=False, null=True)
+    data = models.DateField(blank=True, null=True)
+    hora = models.TimeField(blank=True, null=True)
 
     STATUS_CHOICES = (
         ('A', 'Agendado'),
