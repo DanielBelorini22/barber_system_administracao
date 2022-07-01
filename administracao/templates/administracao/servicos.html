@@ -30,10 +30,14 @@
                             <tbody>
                             {% for servico in servicos %}
                                 <tr>
-                                    <td>{{ servico.nome }}</td>
-                                    <td>{{ servico.duracao }}</td>
-                                    <td>{{ servico.preco }}</td>
-                                    <td>{{ servico.ativo }}</td>
+                                    <td>{{ servico.get_nome_display }}</td>
+                                    <td>{{ servico.get_duracao_display }} H</td>
+                                    <td>R$ {{ servico.preco|floatformat:2 }}</td>
+                                    {% if servico.ativo %}
+                                        <td>Sim</td>
+                                    {% else %}
+                                        <td>Não</td>
+                                    {% endif %}
                                     <td>
                                         <a href="">
                                             <i class="fa-solid fa-pencil" style="color: orange"></i>

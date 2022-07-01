@@ -45,7 +45,11 @@
                                     <td>{{ cliente.nome }}</td>
                                     <td>{{ cliente.cpf }}</td>
                                     <td>{{ cliente.telefone }}</td>
-                                    <td>{{ cliente.ativo }}</td>
+                                    {% if cliente.ativo %}
+                                        <td>Sim</td>
+                                    {% else %}
+                                        <td>Não</td>
+                                    {% endif %}
                                 </tr>
                             {% empty %}
                                 <div class="alert success">

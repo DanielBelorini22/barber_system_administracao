@@ -67,7 +67,7 @@ def service(request):
         form = ServiceForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('services')
     else:
         form = ServiceForm()
     return render(request, 'administracao/serviceform.html', {'form': form, 'data': data})

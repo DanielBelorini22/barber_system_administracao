@@ -55,7 +55,7 @@
                                     <td>{{ list.data }}</td>
                                     <td>{{ list.hora }}</td>
                                     <td>{{ list.get_status_display }}</td>
-                                    <td>{{ list.preco }}</td>
+                                    <td>R$ {{ list.preco|floatformat:2 }}</td>
                                     <td>{{ list.get_pagamento_display }}</td>
                                     <td><a href="{% url 'editar' list.id %}" class="btn btn-info">Editar</a></td>
                                     <td><a href="{% url 'deletar' list.id %}" class="btn btn-danger">Deletar</a></td>
