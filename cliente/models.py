@@ -8,7 +8,7 @@ class Person(models.Model):
     nome = models.CharField('Nome', max_length=100, blank=True)
     cpf = models.CharField('CPF', max_length=14, blank=True)
     telefone = models.CharField('Telefone', max_length=14, blank=True)
-    ativo = models.BooleanField('Ativo', default=True)
+    ativo = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'Cliente'

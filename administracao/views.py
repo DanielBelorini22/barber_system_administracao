@@ -27,10 +27,17 @@ def cliente(request):
         form = ClienteForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('clientes')
     else:
         form = ClienteForm()
     return render(request, 'administracao/clienteform.html', {'form': form, 'data': data})
+
+
+@login_required
+def clientes(request):
+    data = datetime.now()
+    clientes = Person.objects.all()
+    return render(request, 'administracao/clientes.html', {'clientes': clientes, 'data': data})
 
 
 @login_required

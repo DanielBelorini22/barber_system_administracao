@@ -8,7 +8,7 @@ from django.db import models
 class Prof(models.Model):
     nome = models.CharField('Profissional', max_length=100, blank=True)
     telefone = models.CharField('Telefone', max_length=14, blank=True)
-    ativo = models.BooleanField('Ativo', default=True)
+    ativo = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'Profissional'
@@ -46,7 +46,7 @@ class Service(models.Model):
     preco = models.FloatField('Preço R$', null=False, blank=False)
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)
-    ativo = models.BooleanField('Ativo', default=True)
+    ativo = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'Serviço'

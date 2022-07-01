@@ -35,6 +35,7 @@
                             <tr>
                                 <th>Nome</th>
                                 <th>Telefone</th>
+                                <th>Ativo</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -42,6 +43,11 @@
                                 <tr>
                                     <td>{{ profissional.nome }}</td>
                                     <td>{{ profissional.telefone }}</td>
+                                    {% if servico.ativo %}
+                                        <td>Sim</td>
+                                    {% else %}
+                                        <td>Não</td>
+                                    {% endif %}
                                 </tr>
                             {% empty %}
                                 <div class="alert success">
