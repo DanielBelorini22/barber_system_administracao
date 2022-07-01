@@ -118,13 +118,21 @@
 
 
                     <li>
-                        <a href="{% url 'service' %}"><i class="fa-solid fa-scissors fa-fw"></i> Cadastro Serviços</a>
-                    </li>
+                        <a href="{% url 'service' %}"><i class="fa-solid fa-scissors fa-fw"></i> Cadastro Serviços
+                        </a>
                     <li>
                         <a href="{% url 'agenda' %}"><i class="fa-solid fa-calendar fa-fw"></i> Agendamento</a>
                     </li>
                     <li>
                         <a href="{% url 'lista' %}"><i class="fa fa-table fa-fw"></i> Lista de Agendamento</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'lista' %}"><i class="fa fa-file fa-fw"></i> Relatórios</a>
+                        <ul>
+                            <li><a href="{% url 'relatorio_profissional' %}">Profissionais</a></li>
+                            <li><a href="{% url 'relatorio_cliente' %}">Clientes</a></li>
+                            <li><a href="{% url 'relatorio_servico' %}">Serviços</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
