@@ -135,9 +135,47 @@ def edita_cliente(request, id_cliente):
 
 
 @login_required
+def edita_profissional(request, id_profissional):
+    ed = get_object_or_404(Prof, id=id_profissional)
+    if request.method == 'POST':
+        form = ProfForm(request.POST, instance=ed)
+        if form.is_valid():
+            form.save()
+            return redirect('profissionais')
+    else:
+        form = ProfForm(instance=ed)
+    return render(request, 'administracao/profform.html', {'form': form})
+
+
+@login_required
+def edita_servico(request, id_servico):
+    ed = get_object_or_404(Service, id=id_servico)
+    if request.method == 'POST':
+        form = ServiceForm(request.POST, instance=ed)
+        if form.is_valid():
+            form.save()
+            return redirect('services')
+    else:
+        form = ServiceForm(instance=ed)
+    return render(request, 'administracao/serviceform.html', {'form': form})
+
+
+@login_required
 def deleta_cliente(request, id_cliente):
     exclui_cliente = Person.objects.get(id=id_cliente).delete()
     return redirect('home')
+
+
+@login_required
+def deleta_profissional(request, id_profissional):
+    exclui_profissional = Prof.objects.get(id=id_profissional).delete()
+    return redirect('profissionais')
+
+
+@login_required
+def deleta_servico(request, id_servico):
+    exclui_servico = Service.objects.get(id=id_servico).delete()
+    return redirect('services')
 
 
 @login_required
