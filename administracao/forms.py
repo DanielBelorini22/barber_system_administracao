@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, NumberInput
 from cliente.models import Person
 from profissional.models import Prof, Service
 from agenda.models import Agenda
@@ -39,3 +39,6 @@ class AgendaForm(ModelForm):
     class Meta:
         model = Agenda
         fields = '__all__'
+        widgets = {
+            'data': NumberInput(attrs={'type': 'date'}),
+        }
